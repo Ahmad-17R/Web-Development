@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+<div>
+  <img id="bigpic" src="gameon.jpg" alt="bigpic Image">
+</div>
+
+<button onclick="firstone()">Previous</button>
+<button onclick="secondone()">Next</button>
+
+<script>
+  var num = 0;
+  var pics = ['thor.jpeg', 'images (7).jpeg' ];
+  var bigpic = document.getElementById('bigpic');
+
+  function secondone() {
+    num = (num + 1) % pics.length;
+    updatebigpic();
+  }
+
+  function firstone() {
+    num = (num - 1 + pics.length) % pics.length;
+    updatebigpic();
+  }
+
+  function updatebigpic() {
+    bigpic.src = pics[num];
+  }
+
+
+  updatebigpic();
+</script>
+
+</body>
+</html>

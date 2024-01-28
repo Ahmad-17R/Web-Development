@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+</head>
+<body>
+    <p>Enter first number<input type="number" id="Input1" /></p>
+    <p>Enter second number<input type="number" id="Input2" /></p>
+
+    <button onclick="calculate()">Solve</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            var firstvalue = parseFloat(document.getElementById("Input1").value);
+            var secondvalue = parseFloat(document.getElementById("Input2").value);
+            var result;
+            if (firstvalue > secondvalue) {
+                result = "Product: " + (firstvalue * secondvalue);
+            } else {
+                result = "Sum: " + (firstvalue + secondvalue);
+            }
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+
+</body>
+</html>
